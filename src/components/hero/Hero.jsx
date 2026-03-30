@@ -1,11 +1,14 @@
 import React from "react";
-import dotImg from "../../../assets/products/Group 5.png";
-import play from "../../../assets/products/Play.png";
-import banner from "../../../assets/products/banner.png";
+import dotImg from "../../assets/products/Group 5.png";
+import play from "../../assets/products/Play.png";
+import banner from "../../assets/products/banner.png";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-7 md:flex-row justify-around items-center p-30">
+    <div
+      className="w-11/12 mx-auto py-10 flex flex-col gap-7 md:flex-row 
+    justify-around items-center md:p-30"
+    >
       <div className="left-part">
         <div
           className="bg-[#4F39F6]/20 flex items-center 
@@ -20,7 +23,7 @@ const Hero = () => {
         </div>
 
         <div className="space-y-4 mt-3">
-          <h1 className="text-7xl font-bold ">
+          <h1 className=" text-5xl md:text-7xl font-bold ">
             Supercharge Your <br /> Digital Workflow
           </h1>
 
