@@ -3,7 +3,7 @@ import check from "../../assets/products/Check.png";
 
 const Pricing = () => {
   return (
-    <div className="text-center  p-10 md:px-52 md:py-24 space-y-10">
+    <div className="text-center  p-10  md:py-24 space-y-10">
       <h1 className="text-3xl md:text-5xl font-bold">
         Simple, Transparent Pricing
       </h1>
@@ -45,7 +45,10 @@ const Pricing = () => {
         rounded-2xl text-white bg-gradient-to-r
            from-[#4F39F6] to-[#9514FA] relative"
         >
-          <div className="rounded-full px-3 py-1 bg-[#FEF3C6] absolute left-1/2 -top-3 -translate-x-1/2">
+          <div
+            className="rounded-full px-3 py-1 bg-[#FEF3C6] absolute left-1/2 -top-3
+           -translate-x-1/2"
+          >
             <h1 className="text-[12px] text-[#BB4D00]">Most Popular</h1>
           </div>
           <h1 className="text-2xl font-bold">Pro</h1>

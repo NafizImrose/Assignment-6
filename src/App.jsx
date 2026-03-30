@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Pricing from "./components/pricing/Pricing";
@@ -13,6 +14,7 @@ function App() {
       <Ratings></Ratings>
       <Steps></Steps>
       <Pricing></Pricing>
+      <Footer></Footer>
     </>
   );
 }
