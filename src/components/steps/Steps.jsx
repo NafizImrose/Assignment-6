@@ -10,7 +10,7 @@ const Steps = () => {
       <p className="text-[#627382]">
         Start using premium digital tools in minutes, not hours.
       </p>
-      <div className="flex flex-col gap-10 md:flex-row justify-around ">
+      <div className="flex flex-col  md:flex-row justify-center gap-5">
         <div
           className="bg-[#FFFFFF] flex justify-center items-center
          flex-col rounded-2xl space-y-4 px-6 pb-16 pt-10 shadow-sm relative"
