@@ -36,7 +36,10 @@ const Hero = () => {
         </div>
 
         <div className="flex gap-4 mt-8">
-          <button className="btn text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full">
+          <button
+            className="btn text-white bg-gradient-to-r
+           from-[#4F39F6] to-[#9514FA] rounded-full"
+          >
             Explore Products
           </button>
           <button className="btn rounded-full text-[#4F39F6] border-[#4F39F6]">
