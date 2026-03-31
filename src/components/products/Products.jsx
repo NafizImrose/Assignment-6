@@ -15,39 +15,36 @@ const Products = ({ data }) => {
               rounded-2xl bg-[#F9FAFC] relative"
             >
               <div
-                className="rounded-full px-3 py-1 bg-[#FEF3C6] absolute -right-7 top-3
+                className="rounded-full px-3 py-1 bg-[#FEF3C6] absolute -right-2 top-3
                  -translate-x-1/2"
               >
-                <h1 className="text-[12px] text-[#BB4D00]">Most Popular</h1>
+                <h1 className="text-[12px] text-[#BB4D00]">{info.tag}</h1>
               </div>
-              <h1 className="text-2xl font-bold">Pro</h1>
-              <p>Best for professionals</p>
+              <div
+                className="flex justify-center 
+              border-gray-300 items-center w-10 h-10 rounded-full border"
+              >
+                {info.icon}
+              </div>
+              <h1 className="text-2xl font-bold mt-5">{info.name}</h1>
+              <p className="text-sm mt-2">{info.description}</p>
               <p className=" mt-6">
-                <span className=" text-3xl font-bold">$29</span>/Month
+                <span className=" text-3xl font-bold">${info.price}</span>/Month
               </p>
               <ul className="list-none mt-6">
-                <li className="flex gap-2 text-sm">
-                  <img src={check} alt="" /> Access to all premium tools
-                </li>
-                <li className="flex gap-2 text-sm">
-                  <img src={check} alt="" /> Unlimited templates
-                </li>
-                <li className="flex gap-2 text-sm">
-                  <img src={check} alt="" />
-                  Priority support
-                </li>
-                <li className="flex gap-2 text-sm">
-                  <img src={check} alt="" /> Unlimited projects
-                </li>
-                <li className="flex gap-2 text-sm">
-                  <img src={check} alt="" /> Cloud sync
-                </li>
-                <li className="flex gap-2 text-sm">
-                  <img src={check} alt="" /> Advanced analytics
-                </li>
+                {info.features.map((feature) => {
+                  return (
+                    <li className="flex gap-2 text-sm">
+                      <img src={check} alt="" /> {feature}
+                    </li>
+                  );
+                })}
               </ul>
-              <button className="btn rounded-full w-full mt-5 bg-white text-[#4F39F6]">
-                Start Pro Trial
+              <button
+                className="btn rounded-full w-full mt-5  text-white bg-gradient-to-r
+           from-[#4F39F6] to-[#9514FA]"
+              >
+                Buy Now
               </button>
             </div>
           </div>
