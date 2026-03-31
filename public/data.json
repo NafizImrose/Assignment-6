@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Resume Builder",
+    "description": "Create simple and professional resumes quickly with basic templates.",
+    "price": 5,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic customization", "Export to PDF"],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Kit",
+    "description": "Advanced resume builder with ATS optimization and modern designs.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF",
+      "Cover letter builder"
+    ],
+    "icon": "🚀"
+  },
+  {
+    "id": 3,
+    "name": "Career Boost Plan",
+    "description": "All-in-one toolkit for resumes, cover letters, and portfolio creation.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Portfolio builder",
+      "Resume analytics",
+      "Unlimited downloads"
+    ],
+    "icon": "📈"
+  },
+  {
+    "id": 4,
+    "name": "Freelancer Pack",
+    "description": "Perfect for freelancers to showcase skills and projects professionally.",
+    "price": 8,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Project showcase", "Client-ready resumes", "Custom branding"],
+    "icon": "💼"
+  },
+  {
+    "id": 5,
+    "name": "Student Starter",
+    "description": "Designed for students to build their first resume easily.",
+    "price": 3,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Beginner templates", "Easy editor", "Download as PDF"],
+    "icon": "🎓"
+  },
+  {
+    "id": 6,
+    "name": "Executive Pro Suite",
+    "description": "Premium tools for executives with high-end resume and branding options.",
+    "price": 199,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Executive templates",
+      "Personal branding tools",
+      "Priority support"
+    ],
+    "icon": "👑"
+  }
+]
