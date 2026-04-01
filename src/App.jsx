@@ -7,6 +7,7 @@ import Offers from "./components/offers/Offers";
 import Pricing from "./components/pricing/Pricing";
 import Ratings from "./components/ratings/Ratings";
 import Steps from "./components/steps/Steps";
+import { Toaster } from "react-hot-toast";
 
 const dataFetch = async () => {
   const res = await fetch("/data.json");
@@ -17,6 +18,7 @@ function App() {
   const dataPromise = dataFetch();
   return (
     <>
+      <Toaster position="top-right"></Toaster>
       <Navbar></Navbar>
       <Hero></Hero>
       <Ratings></Ratings>

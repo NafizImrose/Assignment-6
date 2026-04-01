@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import check from "../../assets/products/Check.png";
+import toast from "react-hot-toast";
 
 const Products = ({ data }) => {
+  const [cart, setCart] = useState([]);
+
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-2 
     lg:grid-cols-3 gap-6 w-11/12 md:w-10/12 lg:w-7/12 mx-auto mt-10"
     >
       {data.map((info) => {
+        const click = () => {
+          if (cart.includes(info.id)) {
+            toast.error("Already added to cart!");
+          } else {
+            setCart([...cart, info.id]);
+            toast.success("Product added to cart!");
+          }
+        };
         return (
           <div>
             <div
@@ -41,10 +52,13 @@ const Products = ({ data }) => {
                 })}
               </ul>
               <button
-                className="btn rounded-full w-full mt-5  text-white bg-gradient-to-r
-           from-[#4F39F6] to-[#9514FA]"
+                onClick={() => {
+                  click();
+                }}
+                className={`btn rounded-full w-full
+                 mt-5 text-white ${cart.includes(info.id) ? "bg-green-600" : "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]"} `}
               >
-                Buy Now
+                {cart.includes(info.id) ? "Added To Cart" : "Buy Now"}
               </button>
             </div>
           </div>
