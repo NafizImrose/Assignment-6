@@ -1,6 +1,6 @@
 import React from "react";
 
-const NonEmptyCart = ({ cartProduct }) => {
+const NonEmptyCart = ({ cartProduct, removeItem, count, setCount }) => {
   // calculate total dynamically
   const totalMoney = cartProduct.reduce(
     (acc, product) => acc + product.price,
@@ -31,7 +31,13 @@ const NonEmptyCart = ({ cartProduct }) => {
                     </div>
                   </div>
                   <div>
-                    <button className="btn border-none text-red-600">
+                    <button
+                      onClick={() => {
+                        removeItem(product.id);
+                        setCount(count - 1);
+                      }}
+                      className="btn border-none text-red-600"
+                    >
                       Remove
                     </button>
                   </div>

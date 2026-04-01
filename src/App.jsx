@@ -20,6 +20,10 @@ function App() {
   const [count, setCount] = useState(0);
   const [cartProduct, setCartProduct] = useState([]);
 
+  const removeItem = (id) => {
+    setCartProduct((prev) => prev.filter((item) => item.id !== id));
+  };
+
   return (
     <>
       <Toaster position="top-right"></Toaster>
@@ -35,6 +39,7 @@ function App() {
           setCount={setCount}
           cartProduct={cartProduct}
           setCartProduct={setCartProduct}
+          removeItem={removeItem}
         ></Offers>
       </Suspense>
 

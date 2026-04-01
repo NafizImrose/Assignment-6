@@ -8,6 +8,7 @@ const Offers = ({
   setCount,
   cartProduct,
   setCartProduct,
+  removeItem,
 }) => {
   const data = use(dataPromise);
   const [toggleType, setToggleType] = useState("Product");
@@ -51,7 +52,13 @@ const Offers = ({
           cartProduct={cartProduct}
         ></Products>
       ) : (
-        <Cart data={data} cartProduct={cartProduct} count={count}></Cart>
+        <Cart
+          data={data}
+          cartProduct={cartProduct}
+          count={count}
+          setCount={setCount}
+          removeItem={removeItem}
+        ></Cart>
       )}
     </div>
   );
