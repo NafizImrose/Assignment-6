@@ -17,7 +17,7 @@ const Products = ({ data, count, setCount, setCartProduct, cartProduct }) => {
           } else {
             setCart([...cart, info.id]);
             setCount(count + 1);
-            setCartProduct(...cartProduct, info);
+            setCartProduct([...cartProduct, info]);
             toast.success("Product added to cart!");
           }
         };
