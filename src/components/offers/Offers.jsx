@@ -51,7 +51,7 @@ const Offers = ({
           cartProduct={cartProduct}
         ></Products>
       ) : (
-        <Cart data={data} cartProduct={cartProduct}></Cart>
+        <Cart data={data} cartProduct={cartProduct} count={count}></Cart>
       )}
     </div>
   );

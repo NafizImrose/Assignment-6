@@ -19,6 +19,7 @@ function App() {
   const dataPromise = useMemo(() => dataFetch(), []);
   const [count, setCount] = useState(0);
   const [cartProduct, setCartProduct] = useState([]);
+
   return (
     <>
       <Toaster position="top-right"></Toaster>
