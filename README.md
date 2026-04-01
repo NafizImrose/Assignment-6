@@ -30,18 +30,7 @@ DigiTools is a modern web application that offers a collection of premium digita
 
 ## 🚀 Live Demo
 
-👉 Add your live link here (Netlify / Vercel)
-
----
-
-## 📂 Installation
-
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-npm install
-npm run dev
-```
+👉 https://sparkly-babka-3ed4f5.netlify.app/
 
 ---
 
