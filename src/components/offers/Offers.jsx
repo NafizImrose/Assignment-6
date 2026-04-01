@@ -1,10 +1,17 @@
-import React, { use, useState } from "react";
 import Products from "../products/Products";
 import Cart from "../cart/Cart";
+import React, { use, useState } from "react";
 
-const Offers = ({ dataPromise }) => {
+const Offers = ({
+  dataPromise,
+  count,
+  setCount,
+  cartProduct,
+  setCartProduct,
+}) => {
   const data = use(dataPromise);
   const [toggleType, setToggleType] = useState("Product");
+
   return (
     <div className="py-20">
       <h1 className="text-5xl font-bold text-center">Premium Digital Tools</h1>
@@ -32,13 +39,19 @@ const Offers = ({ dataPromise }) => {
               : "bg-white border-l-0 rounded-l-none"
           }`}
         >
-          Cart (0)
+          Cart ({count})
         </button>
       </div>
       {toggleType === "Product" ? (
-        <Products data={data}></Products>
+        <Products
+          data={data}
+          count={count}
+          setCount={setCount}
+          setCartProduct={setCartProduct}
+          cartProduct={cartProduct}
+        ></Products>
       ) : (
-        <Cart data={data}></Cart>
+        <Cart data={data} cartProduct={cartProduct}></Cart>
       )}
     </div>
   );

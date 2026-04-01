@@ -1,7 +1,7 @@
 import React from "react";
 import shoppingCart from "../../assets/products/shopping-cart.png";
 
-const Navbar = () => {
+const Navbar = ({ count }) => {
   return (
     <div className="bg-base-100 shadow-sm">
       <div className="navbar bg-base-100 md:w-11/12 mx-auto">
@@ -72,8 +72,16 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end flex gap-1 md:gap-3">
-          <img src={shoppingCart} alt="" />
+        <div className="navbar-end flex gap-1 md:gap-3 relative ">
+          <div
+            className="bg-red-400 text-white absolute right-48 bottom-5
+          flex justify-center items-center rounded-full w-4 h-4 text-sm p-3 "
+          >
+            <p>{count}</p>
+          </div>
+          <div className="w-7 h-7">
+            <img className="w-full h-full" src={shoppingCart} alt="" />
+          </div>
           <div className="btn border-none rounded-full">Login</div>
           <a
             className="btn rounded-full bg-gradient-to-r from-[#4F39F6] via-[#6B2CF5] 

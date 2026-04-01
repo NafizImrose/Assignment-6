@@ -1,7 +1,7 @@
 import React from "react";
 
-const Cart = ({ data }) => {
-  console.log(data, "cart");
+const Cart = ({ cartProduct }) => {
+  console.log(cartProduct, "cart");
   return (
     <div>
       <h1>cart</h1>

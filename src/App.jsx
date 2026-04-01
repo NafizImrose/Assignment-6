@@ -8,6 +8,7 @@ import Pricing from "./components/pricing/Pricing";
 import Ratings from "./components/ratings/Ratings";
 import Steps from "./components/steps/Steps";
 import { Toaster } from "react-hot-toast";
+import React, { useState, useMemo } from "react";
 
 const dataFetch = async () => {
   const res = await fetch("/data.json");
@@ -15,17 +16,25 @@ const dataFetch = async () => {
 };
 
 function App() {
-  const dataPromise = dataFetch();
+  const dataPromise = useMemo(() => dataFetch(), []);
+  const [count, setCount] = useState(0);
+  const [cartProduct, setCartProduct] = useState([]);
   return (
     <>
       <Toaster position="top-right"></Toaster>
-      <Navbar></Navbar>
+      <Navbar count={count}></Navbar>
       <Hero></Hero>
       <Ratings></Ratings>
       <Suspense
-        fallback={<span className="loading loading-dots loading-xl"></span>}
+        fallback={<span className="loading loading-dots loading-xl "></span>}
       >
-        <Offers dataPromise={dataPromise}></Offers>
+        <Offers
+          dataPromise={dataPromise}
+          count={count}
+          setCount={setCount}
+          cartProduct={cartProduct}
+          setCartProduct={setCartProduct}
+        ></Offers>
       </Suspense>
 
       <Steps></Steps>

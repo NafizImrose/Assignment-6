@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import check from "../../assets/products/Check.png";
 import toast from "react-hot-toast";
 
-const Products = ({ data }) => {
+const Products = ({ data, count, setCount, setCartProduct, cartProduct }) => {
   const [cart, setCart] = useState([]);
 
   return (
@@ -16,11 +16,13 @@ const Products = ({ data }) => {
             toast.error("Already added to cart!");
           } else {
             setCart([...cart, info.id]);
+            setCount(count + 1);
+            setCartProduct(...cartProduct, info);
             toast.success("Product added to cart!");
           }
         };
         return (
-          <div>
+          <div key={info.id}>
             <div
               className=" p-6 text-left  shadow-2xl 
               rounded-2xl bg-[#F9FAFC] relative"
@@ -45,7 +47,7 @@ const Products = ({ data }) => {
               <ul className="list-none mt-6">
                 {info.features.map((feature) => {
                   return (
-                    <li className="flex gap-2 text-sm">
+                    <li key={feature} className="flex gap-2 text-sm">
                       <img src={check} alt="" /> {feature}
                     </li>
                   );
