@@ -55,6 +55,7 @@ const Offers = ({
         <Cart
           data={data}
           cartProduct={cartProduct}
+          setCartProduct={setCartProduct}
           count={count}
           setCount={setCount}
           removeItem={removeItem}

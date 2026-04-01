@@ -1,7 +1,7 @@
 import EmptyCart from "../emptyCart/EmptyCart";
 import NonEmptyCart from "../nonEmptyCart/NonEmptyCart";
 
-const Cart = ({ cartProduct, count, setCount, removeItem }) => {
+const Cart = ({ cartProduct, count, setCount, removeItem, setCartProduct }) => {
   return count === 0 ? (
     <EmptyCart></EmptyCart>
   ) : (
@@ -10,6 +10,7 @@ const Cart = ({ cartProduct, count, setCount, removeItem }) => {
       removeItem={removeItem}
       count={count}
       setCount={setCount}
+      setCartProduct={setCartProduct}
     ></NonEmptyCart>
   );
 };

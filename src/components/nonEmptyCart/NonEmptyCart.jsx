@@ -1,11 +1,32 @@
 import React from "react";
+import toast from "react-hot-toast";
 
-const NonEmptyCart = ({ cartProduct, removeItem, count, setCount }) => {
+const NonEmptyCart = ({
+  cartProduct,
+  removeItem,
+  count,
+  setCount,
+  setCartProduct,
+}) => {
   // calculate total dynamically
   const totalMoney = cartProduct.reduce(
     (acc, product) => acc + product.price,
     0,
   );
+  //proceed tp checkout button
+  const handleCheckout = () => {
+    if (cartProduct.length === 0) {
+      toast.error("Your cart is empty!");
+      return;
+    }
+
+    // Clear the cart
+    setCartProduct([]);
+    setCount(0);
+
+    // Show success toast
+    toast.success("Checkout successful! Your cart is now empty.");
+  };
   return (
     <div>
       <div>
@@ -35,6 +56,7 @@ const NonEmptyCart = ({ cartProduct, removeItem, count, setCount }) => {
                       onClick={() => {
                         removeItem(product.id);
                         setCount(count - 1);
+                        toast.success("Product removed from cart!");
                       }}
                       className="btn border-none text-red-600"
                     >
@@ -50,7 +72,10 @@ const NonEmptyCart = ({ cartProduct, removeItem, count, setCount }) => {
             <p className="font-semibold text-xl">${totalMoney}</p>
           </div>
           <div>
-            <button className="btn btn-primary w-full rounded-full p-6">
+            <button
+              onClick={handleCheckout}
+              className="btn btn-primary w-full rounded-full p-6"
+            >
               Proceed to Checkout
             </button>
           </div>
