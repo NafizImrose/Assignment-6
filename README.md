@@ -30,7 +30,7 @@ DigiTools is a modern web application that offers a collection of premium digita
 
 ## 🚀 Live Demo
 
-👉 https://sparkly-babka-3ed4f5.netlify.app/
+👉 https://nafizimrose-assignment-6.netlify.app/
 
 ---
 
