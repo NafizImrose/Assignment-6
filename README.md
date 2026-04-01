@@ -1,16 +1,56 @@
-# React + Vite
+# 🚀 DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Description
 
-Currently, two official plugins are available:
+DigiTools is a modern web application that offers a collection of premium digital tools designed to boost productivity and creativity. Users can explore products, add them to a cart, and manage their selections with a smooth and interactive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ React.js
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🔔 React Hot Toast
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🛒 **Interactive Cart System**
+  Add and remove products with real-time updates and dynamic total calculation.
+
+- 🔄 **Smart UI State Management**
+  Buttons change instantly (e.g., “Buy Now” → “Added to Cart”) with smooth UX.
+
+- 📱 **Responsive Design**
+  Fully responsive layout that works beautifully on mobile, tablet, and desktop.
+
+---
+
+## 🚀 Live Demo
+
+👉 Add your live link here (Netlify / Vercel)
+
+---
+
+## 📂 Installation
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
+npm run dev
+```
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this project and improve it. Contributions are always welcome!
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
